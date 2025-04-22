@@ -56,7 +56,7 @@ const ToDo = () => {
                     <h1 className='text-center border-2 m-2 p-1 rounded-md text-2xl font-bold border-black'>
                         All Saved Task :
                     </h1>
-                    <div className='flex flex-wrap justify-center gap-4'>
+                    <div className='flex flex-wrap justify-center gap-4 '>
                     {todos.map(({ id, title }) => {
                         return (
                             <Card key={id} id={id} title={title}  />
