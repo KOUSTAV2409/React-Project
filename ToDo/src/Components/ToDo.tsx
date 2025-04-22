@@ -22,16 +22,21 @@ const ToDo = () => {
     const Card = ({ id, title }) => {
         return (
             <>
-                <div className='h-40 w-44 border'>
-                    <h1 className='text-center'>Task Card</h1>
+                <div className='h-40 w-44 border rounded-md'>
+                    <h1 className='text-center'>Task Card {id}</h1>
+                    <hr />
 
+                    <div className='p-1'>
                     <p>Task : {id}</p>
                     <p>Task Title : {title}</p>
+                    </div>
 
                 </div>
             </>
         )
     }
+
+    
 
     return (
         <>
