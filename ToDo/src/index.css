@@ -8,6 +8,7 @@ body,
 :root{
   background: white;
   color: black;
+  font-family: "Winky Rough";
 }
 
 @theme inline {

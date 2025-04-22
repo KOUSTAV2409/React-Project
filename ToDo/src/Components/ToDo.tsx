@@ -31,7 +31,7 @@ const ToDo = () => {
         return (
             <>
                 <div className={`h-40 w-44 border rounded-md`} style={{ backgroundColor: randomColor }}>
-                    <h1 className='text-center'>Task Card {id}</h1>
+                    <h1 className='text-center'><b>Task Card {id}</b></h1>
                     <hr />
 
                     <div className='p-1'>
