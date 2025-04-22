@@ -6,8 +6,8 @@
 html,
 body,
 :root{
-  background: black;
-  color: aliceblue;
+  background: white;
+  color: black;
 }
 
 @theme inline {
