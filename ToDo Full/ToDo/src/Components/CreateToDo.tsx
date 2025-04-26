@@ -39,7 +39,7 @@ const CreateToDo = () => {
             placeholder='Enter your task :'
             value={task}
             onChange={(e) => setTask(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyPress}
             className='w-80'
           />
           <Button onClick={handleClick}>Add</Button>
