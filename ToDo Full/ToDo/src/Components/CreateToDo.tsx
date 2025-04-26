@@ -4,7 +4,8 @@ import { Button } from "@/Components/ui/button";
 
 const CreateToDo = () => {
   const [task, setTask] = useState('');
-  const [addButton, setAddButton] = useState([]);
+  // const [addButton, setAddButton] = useState([]);
+  const [addButton, setAddButton] = useState<Array<string>>([]); // changes in type checking of array of string
 
   const handleClick = () => {
     if (task.trim()) {
@@ -15,12 +16,12 @@ const CreateToDo = () => {
     }
   };
 
-  const handleDelete = (index) => {
+  const handleDelete = (index : number) => {
     const updatedTasks = addButton.filter((_, i) => i !== index);
     setAddButton(updatedTasks);
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleClick()
     }
