@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from "@/Components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 
 const CreateToDo = () => {
   const [task, setTask] = useState('');
@@ -20,6 +20,12 @@ const CreateToDo = () => {
     setAddButton(updatedTasks);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleClick()
+    }
+  }
+
   return (
     <div className='h-lvh w-screen flex items-center flex-col bg-gray-200'> {/* Added background color to entire page */}
       <h1 className='text-center font-bold text-2xl border rounded-md p-2 h-1/5 flex justify-center items-center w-full bg-blue-900 text-white'>
@@ -33,6 +39,7 @@ const CreateToDo = () => {
             placeholder='Enter your task :'
             value={task}
             onChange={(e) => setTask(e.target.value)}
+            onKeyPress={handleKeyPress}
             className='w-80'
           />
           <Button onClick={handleClick}>Add</Button>
