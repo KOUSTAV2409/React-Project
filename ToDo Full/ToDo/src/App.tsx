@@ -15,7 +15,7 @@ function App() {
   return (
     <>
 
-      {/* <Landing/> */}
+      <Landing/>
       <CreateToDo/>
       
       
